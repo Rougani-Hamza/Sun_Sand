@@ -8,7 +8,7 @@
         <div class="card-body">
           <h5 class="card-title">Cities</h5>
           <!-- <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6> -->
-          <p class="card-text">number of cities: 4</p>
+          <p class="card-text">number of cities: {{ $citiesCount }}</p>
          
         </div>
       </div>
@@ -18,7 +18,7 @@
         <div class="card-body">
           <h5 class="card-title">Spots</h5>
           
-          <p class="card-text">number of spots: 8</p>
+          <p class="card-text">number of spots: {{ $spotsCount }}</p>
           
         </div>
       </div>
@@ -28,7 +28,7 @@
         <div class="card-body">
           <h5 class="card-title">Admins</h5>
           
-          <p class="card-text">number of admins: 1</p>
+          <p class="card-text">number of admins: {{ $adminsCount }}</p>
           
         </div>
       </div>

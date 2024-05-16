@@ -17,7 +17,7 @@ class Reservation extends Model
         "phone_number",
         "num_guests",
         "checK_in_date",
-        "spots",
+        "destination",
         "price",
         "user_id",
         "status",

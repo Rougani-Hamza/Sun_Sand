@@ -3,12 +3,13 @@
 @section('content')
 <section id="section-1">
     <div class="content-slider">
-      @foreach($cities as $city)
-        <input type="radio" id="banner{{ $city->id }}" class="sec-1-input" name="banner" checked>
+      
+      @foreach($cities as $key => $city)
+        <input type="radio" id="banner{{  $key +1 }}" class="sec-1-input" name="banner" checked>
       @endforeach
       <div class="slider">
-        @foreach($cities as $city)
-        <div id="top-banner-{{ $city->id }}" class="banner" class="progressbar-fill" class="progressbar" style="background-image: url('{{ asset('assets/images/'.$city->image.'')}}')">
+        @foreach($cities as $key => $city)
+        <div id="top-banner-{{ $key+1 }}" class="banner" class="progressbar-fill" class="progressbar" style="background-image: url('{{ asset('assets/images/'.$city->image.'')}}')">
           <div class="banner-inner-wrapper header-text">
             <div class="main-caption">
               <h2>Discover Various Beautiful Spots Of:</h2>
@@ -157,8 +158,8 @@
       </div>
       <nav>
         <div class="controls">
-          @foreach($cities as $city)
-          <label for="banner{{$city->id}}"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">{{ $city->id }}</span></label>
+          @foreach($cities as $key => $city)
+          <label for="banner{{$key+1}}"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">{{ $key+1 }}</span></label>
           @endforeach
           {{-- <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text"></span></label>
           <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text"></span></label>
@@ -189,7 +190,7 @@
                   <div class="row">
                     <div class="col-lg-4 col-sm-5">
                       <div class="image">
-                        <img src="{{ asset('assets/images/'.$city->image.'')}}" alt="">
+                        <img src="{{ asset('assets/images/'.$city->image.'')}}" alt="" style="width:201px;height:205px">
                       </div>
                     </div>
                     <div class="col-lg-8 col-sm-7">

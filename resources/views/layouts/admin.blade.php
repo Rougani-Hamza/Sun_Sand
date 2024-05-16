@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Admin Panel</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
      <link href="{{ asset ('assets/styles/style.css')}}" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -29,16 +29,16 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admins/admins.html" style="margin-left: 20px;">Admins</a>
+            <a class="nav-link" href="{{ route('admins.all.admins') }}" style="margin-left: 20px;">Admins</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="countries-admins/show-country.html" style="margin-left: 20px;">Cites</a>
+            <a class="nav-link" href="{{ route('all.cities') }}" style="margin-left: 20px;">Cites</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cities-admins/show-cities.html" style="margin-left: 20px;">Spots</a>
+            <a class="nav-link" href="#" style="margin-left: 20px;">Spots</a>
           </li>  
           <li class="nav-item">
-            <a class="nav-link" href="bookings-admins/show-bookings.html" style="margin-left: 20px;">Bookings</a>
+            <a class="nav-link" href="#" style="margin-left: 20px;">Bookings</a>
           </li>
         </ul>
         @endauth
@@ -68,7 +68,7 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('view.login') }}">login
+            <a class="nav-link" href="{{ route('view.login') }}">Login
             </a>
           </li>
             

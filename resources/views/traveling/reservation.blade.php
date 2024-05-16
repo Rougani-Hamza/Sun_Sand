@@ -36,7 +36,7 @@
           <div class="info-item">
             <i class="fa fa-map-marker"></i>
             <h4>Visit Our Offices</h4>
-            <a href="#">24th Street North Avenue London, UK</a>
+            <a href="#">DAR HT_INER AGADIR EL GOUIRA</a>
           </div>
         </div>
       </div>
@@ -46,10 +46,10 @@
   <div class="reservation-form">
     <div class="container">
       <div class="row">
-       
         <div class="col-lg-12">
-          <form id="reservation-form" name="gs" method="POST" role="search" action="{{ route ('traveling.reservation.store', $spots->id)}}">
+          <form id="reservation-form" name="gs" method="POST" role="search" action="{{ route ('traveling.reservation.store')}}">
             @csrf
+            <input type="hidden" name="id" value="{{ $spots->id}}">
             <div class="row">
               <div class="col-lg-12">
                 <h4>Make Your <em>Reservation</em> Through This <em>Form</em></h4>
@@ -57,7 +57,7 @@
               <div class="col-lg-6">
                   <fieldset>
                       <label for="Name" class="form-label">Your Name</label>
-                      <input type="text" name="name" class="Name" placeholder="Ex. Salah Hamouchi" autocomplete="on" required>
+                      <input type="text" name="name" class="Name" placeholder="Ex. Salah Hammouchi" autocomplete="on" required>
                   </fieldset>
               </div>
               <div class="col-lg-6">
@@ -87,14 +87,26 @@
               </div>
               <div class="col-lg-12">
                   <fieldset>
-                      <label for="chooseDestination" class="form-label">Choose Your Destination</label>
-                      <input disabled type="text" value="{{$spots->name}}" name="destination" class="Name" required>
+                      <input type="hidden" value="{{$spots->name}}" name="destination" class="Name" required>
 
                   </fieldset>
               </div>
+              <div class="col-lg-12">
+                @if(isset(Auth::user()->id))
+                <fieldset>
+                    <input type="hidden" value="{{ Auth::user()->id}}" name="user_id" class="Name" required>
+                </fieldset>
+                @endif
+            </div>
+
               <div class="col-lg-12">                        
                   <fieldset>
+                    @if(isset(Auth::user()->id))
                       <button type="submit" class="main-button">Make Your Reservation Now</button>
+
+                      @else
+                      <p class="alert alert-success"> Login To Make A Booking </p>
+                      @endif
                   </fieldset>
               </div>
             </div>
