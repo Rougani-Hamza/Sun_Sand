@@ -16,8 +16,22 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading text-center">
-            <h2>Best Weekly Offers In Each City</h2>
-            <p>We Always Try To Provide.</p>
+            <h2><b>Best Weekly Offers In Each City</b></h2>
+            <p>We Always Try To Provide The Best Service With Comptetive Price</p>
+            <div class="alert alert-info" role="alert">
+              In case of order cancellation, the refund process will take approximately <strong>3-10 business days</strong>.
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Feel Free to Contact Us</h5>
+                <p class="card-text">Our Customer support team is available from 10:00 AM to 6:00 PM (weekends excluded).</p>
+                <p class="card-text">You can reach us by:</p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><strong>Email:</strong> Sun_Sand@gmail.com</li>
+                  <li class="list-group-item"><strong>Phone:</strong> +2126-39465647</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <table class="table">
@@ -42,7 +56,7 @@
                 <td>{{$booking->num_guests}}</td>
                 <td>{{$booking->checK_in_date}}</td>
                 <td>{{$booking->destination}}</td>
-                <td>{{$booking->price}}</td>
+                <td>{{$booking->price}} DH</td>
                 <td>{{$booking->status}}</td>
 
               </tr>

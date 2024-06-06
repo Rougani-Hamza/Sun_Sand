@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Admin Panel</title>
+    <link rel="icon" href="/assets/images/admin.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
      <link href="{{ asset ('assets/styles/style.css')}}" rel="stylesheet">
@@ -32,13 +33,13 @@
             <a class="nav-link" href="{{ route('admins.all.admins') }}" style="margin-left: 20px;">Admins</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('all.cities') }}" style="margin-left: 20px;">Cites</a>
+            <a class="nav-link" href="{{ route('all.cities') }}" style="margin-left: 20px;">Cities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="margin-left: 20px;">Spots</a>
+            <a class="nav-link" href="{{ route('all.spots') }}" style="margin-left: 20px;">Spots</a>
           </li>  
           <li class="nav-item">
-            <a class="nav-link" href="#" style="margin-left: 20px;">Bookings</a>
+            <a class="nav-link" href="{{ route('all.bookings') }}" style="margin-left: 20px;">Bookings</a>
           </li>
         </ul>
         @endauth

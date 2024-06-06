@@ -9,7 +9,7 @@
       @endforeach
       <div class="slider">
         @foreach($cities as $key => $city)
-        <div id="top-banner-{{ $key+1 }}" class="banner" class="progressbar-fill" class="progressbar" style="background-image: url('{{ asset('assets/images/'.$city->image.'')}}')">
+        <div id="top-banner-{{$key+1}}" class="banner" class="progressbar-fill" class="progressbar" style="background-image: url('{{ asset('assets/images/'.$city->image.'')}}')">
           <div class="banner-inner-wrapper header-text">
             <div class="main-caption">
               <h2>Discover Various Beautiful Spots Of:</h2>
@@ -46,124 +46,12 @@
           </div>
         </div>
         @endforeach
-
-        {{-- <div id="top-banner-2" class="banner">
-          <div class="banner-inner-wrapper header-text">
-            <div class="main-caption">
-              <h2>Discover Various Beautiful Spots Of:</h2>
-              <h1>Taghazout</h1>
-              <div class="border-button"><a href="about.html">Go There</a></div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="more-info">
-                    <div class="row">
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-user"></i>
-                        <h4><span>Population:</span><br>10K</h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-globe"></i>
-                        <h4><span>Territory:</span><br>20KM²<em></em></h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-home"></i>
-                        <h4><span>AVG Rent Price:</span><br>700MD</h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <div class="main-button">
-                          <a href="about.html">Explore More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="top-banner-3" class="banner">
-          <div class="banner-inner-wrapper header-text">
-            <div class="main-caption">
-              <h2>Discover Various Beautiful Spots Of :</h2>
-              <h1>Tamraght</h1>
-              <div class="border-button"><a href="about.html">Go There</a></div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="more-info">
-                    <div class="row">
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-user"></i>
-                        <h4><span>Population:</span><br>12.5K</h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-globe"></i>
-                        <h4><span>Territory:</span><br> 30KM²<em></em></h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-home"></i>
-                        <h4><span>AVG Rent Price:</span><br>500MAD</h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <div class="main-button">
-                          <a href="about.html">Explore More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="top-banner-4" class="banner">
-          <div class="banner-inner-wrapper header-text">
-            <div class="main-caption">
-              <h2>Discover Various Beautiful Spots Of:</h2>
-              <h1>Imi Ouaddar</h1>
-              <div class="border-button"><a href="about.html">Go There</a></div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="more-info">
-                    <div class="row">
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-user"></i>
-                        <h4><span>Population:</span><br>22K</h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-globe"></i>
-                        <h4><span>Territory:</span><br>20KM²<em></em></h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <i class="fa fa-home"></i>
-                        <h4><span>AVG Rent Price:</span><br>600MAD</h4>
-                      </div>
-                      <div class="col-lg-3 col-sm-6 col-6">
-                        <div class="main-button">
-                          <a href="about.html">Explore More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
       </div>
       <nav>
         <div class="controls">
           @foreach($cities as $key => $city)
           <label for="banner{{$key+1}}"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">{{ $key+1 }}</span></label>
           @endforeach
-          {{-- <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text"></span></label>
-          <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text"></span></label>
-          <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text"></span></label> --}}
         </div>
       </nav>
     </div>
@@ -214,67 +102,7 @@
                   </div>
                 </div>
               </div>
-              @endforeach
-
-              {{-- <div class="col-lg-12">
-                <div class="item">
-                  <div class="row">
-                    <div class="col-lg-4 col-sm-5">
-                      <div class="image">
-                        <img src="assets/images/country-02.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-8 col-sm-7">
-                      <div class="right-content">
-                        <h4>CARIBBEAN</h4>
-                        <span>North America</span>
-                        <div class="main-button">
-                          <a href="about.html">Explore More</a>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                        <ul class="info">
-                          <li><i class="fa fa-user"></i> 44.48 Mil People</li>
-                          <li><i class="fa fa-globe"></i> 275.400 km2</li>
-                          <li><i class="fa fa-home"></i> $946.000</li>
-                        </ul>
-                        <div class="text-button">
-                          <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="item last-item">
-                  <div class="row">
-                    <div class="col-lg-4 col-sm-5">
-                      <div class="image">
-                        <img src="assets/images/country-03.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-8 col-sm-7">
-                      <div class="right-content">
-                        <h4>FRANCE</h4>
-                        <span>Europe</span>
-                        <div class="main-button">
-                          <a href="about.html">Explore More</a>
-                        </div>
-                        <p>We hope this WoOx template is useful for you, please support us a <a href="https://paypal.me/templatemo" target="_blank">small amount of PayPal</a> to info [at] templatemo.com for our survival. We really appreciate your contribution.</p>
-                        <ul class="info">
-                          <li><i class="fa fa-user"></i> 67.41 Mil People</li>
-                          <li><i class="fa fa-globe"></i> 551.500 km2</li>
-                          <li><i class="fa fa-home"></i> $425.600</li>
-                        </ul>
-                        <div class="text-button">
-                          <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> --}}
-              
+              @endforeach  
             </div>
           </div>
         </div>

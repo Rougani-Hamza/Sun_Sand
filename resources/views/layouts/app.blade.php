@@ -1,4 +1,5 @@
 <!doctype html>
+<link rel="icon" href="/assets/images/sunsand.png" type="image/png">
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -93,8 +94,8 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <p>Copyright © 2024 DREAMTEAM <a href="#">Sun-Sand</a> Company. All rights reserved. 
-              <br>Design: <a href="#TEAMSAA7" target="_blank" title="free CSS templates">DREAMTEAM</a> Distribution: <a href="# target="_blank >ThemeSun-Sand</a></p>
+              <p>Copyright © 2024<a href="#">Sun_Sand</a> Touristique Portail. All Rights Reserved. 
+              <br>Design: <a href="" target="_blank" title="Sun_Sand">DREAMTEAM</a><a href="# target="_blank >Contact Us</a></p>
             </div>
           </div>
         </div>       

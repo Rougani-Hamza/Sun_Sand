@@ -8,8 +8,8 @@
         <div class="col-lg-12">
           <h4>Book Prefered Deal Here</h4>
           <h2>Make Your Reservation</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt uttersi labore et dolore magna aliqua is ipsum suspendisse ultrices gravida</p>
-          <div class="main-button"><a href="about.html">Discover More</a></div>
+          <p>Thank you for choosing us! Once your order is placed and payment received, we'll promptly confirm via phone or email. Your satisfaction is our priority, and we're here to assist you. We appreciate your trust and look forward to serving you</p>
+          <div class="main-button"><a href="{{ route('traveling.deals') }}">Discover More</a></div>
         </div>
       </div>
     </div>
@@ -29,14 +29,14 @@
           <div class="info-item">
             <i class="fa fa-envelope"></i>
             <h4>Contact Us via Email</h4>
-            <a href="#">company@email.com</a>
+            <a href="#">sun_sand@gmail.com</a>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6">
           <div class="info-item">
             <i class="fa fa-map-marker"></i>
-            <h4>Visit Our Offices</h4>
-            <a href="#">DAR HT_INER AGADIR EL GOUIRA</a>
+            <h4>Visit Our Office</h4>
+            <a href="#">DAR MOMKIN AGADIR</a>
           </div>
         </div>
       </div>

@@ -61,7 +61,7 @@
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading text-center">
             <h2>Best Weekly Offers In Each City</h2>
-            <p>We Always Try To Provide.</p>
+            <p>We Always Try To Update You With New Offer</p>
           </div>
         </div>
         @foreach ($spots as $spot)
@@ -70,7 +70,7 @@
               <div class="row">
                 <div class="col-lg-6">
                   <div class="image">
-                    <img src="{{asset ('assets/images/'.$spot->image.'')}}" alt="">
+                    <img src="{{asset ('assets/images/'.$spot->image.'')}}" alt="" style="width:240px;height:240px">
                   </div>
                 </div>
                 <div class="col-lg-6 align-self-center">
@@ -80,14 +80,14 @@
                     <div class="row">
                       <div class="col-6">
                         <i class="fa fa-clock"></i>
-                        <span class="list">Enjoy Ur Days</span>
+                        <span class="list">From 1 to 3h</span>
                       </div>
                       <div class="col-6">
                         <i class="fa fa-map"></i>
-                        <span class="list">Daily Places</span>
+                        <span class="list">Discover a new area</span>
                       </div>
                     </div>
-                    <p>Discover an Amazing Area</p>
+                    <p>Don't miss this offer!</p>
                     <div class="main-button">
                       <a href="{{route ('traveling.reservation', $spot->id)}}">Make a Reservation</a>
                     </div>

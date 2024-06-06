@@ -1,7 +1,7 @@
 @extends ('layouts.app')
 
 @section('content')
-<div class="about-main-content" style="margin-top:-25px">
+<div class="about-main-content text-center" style="margin-top:-25px">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -16,32 +16,31 @@
       </div>
     </div>
   </div>
-    <div class="container">  
-                    <!-- Replace "test" with your own sandbox Business account app client ID -->
-                    <script src="https://www.paypal.com/sdk/js?client-id=AXDd1njqX7IjFn00RA4yL97wjIe7agVG2DxqGpVBXEZKUNCLz2e4FHJT0kMYx8Tn5nouG1S_jPUNe1k8&currency=USD"></script>
-                    <!-- Set up a container element for the button -->
-                    <div id="paypal-button-container"></div>
-                    <script>
-                        paypal.Buttons({
-                        // Sets up the transaction when a payment button is clicked
-                        createOrder: (data, actions) => {
-                            return actions.order.create({
-                            purchase_units: [{
-                                amount: {
-                                value: '{{Session::get('price')}}' // Can also reference a variable or function
-                                }
-                            }]
-                            });
-                        },
-                        // Finalize the transaction after payer approval
-                        onApprove: (data, actions) => {
-                            return actions.order.capture().then(function(orderData) {
-                          
-                             window.location.href='http://127.0.0.1:8000/traveling/success';
-                            });
+  <div class="container text-center">  
+    <!-- Replace "test" with your own sandbox Business account app client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AXDd1njqX7IjFn00RA4yL97wjIe7agVG2DxqGpVBXEZKUNCLz2e4FHJT0kMYx8Tn5nouG1S_jPUNe1k8&currency=EUR"></script>
+    <!-- Set up a container element for the button -->
+    <div id="paypal-button-container" style="display: flex; flex-direction:column; align-items:center;"></div>
+    <script>
+        paypal.Buttons({
+            // Sets up the transaction when a payment button is clicked
+            createOrder: (data, actions) => {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '{{ Session::get('price') }}' // Can also reference a variable or function
                         }
-                        }).render('#paypal-button-container');
-                    </script>
-                  
-                </div>
+                    }]
+                });
+            },
+            // Finalize the transaction after payer approval
+            onApprove: (data, actions) => {
+                return actions.order.capture().then(function(orderData) {
+                    window.location.href='http://127.0.0.1:8000/traveling/traveling/success';
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+</div>
+
 @endsection

@@ -1,51 +1,86 @@
 /* General Body Styles */
 body {
-    background: #ffffff;
-    font-family: Arial, sans-serif; /* Ensures text is readable */
+    background-color: #f8f9fa; /* Neutral background color */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean and professional font */
+    color: #333; /* Optimal text color for readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+a{
+    text-decoration: none;
 }
 
 /* Wrapper Styles */
 #wrapper {
-    padding: 90px 15px;
+    padding-top: 90px; /* Space for fixed navbar */
+    transition: padding-left 0.3s ease-in-out; /* Smooth transition for sidebar toggle */
 }
 
 /* Navbar Styles */
-.navbar-expand-lg .navbar-nav.side-nav {
-    flex-direction: column; /* Aligns nav items vertically in sidebar */
-}
-
 .navbar {
-    box-shadow: 0 3px 5px rgba(231, 87, 87, 0.1); /* Adds shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #343a40; /* Bootstrap dark background */
 }
 
 .header-top {
-    background-color: #0073ff; /* Dark background for the top bar */
-    color: #ffffff; /* Ensures text is visible against the dark background */
+    background-color: #007bff; /* Bootstrap primary color for top bar */
+    color: #ffffff; /* White color for text for contrast */
+}
+
+/* Navbar Link Styles */
+.nav-link {
+    color: #ffffff; /* White text color for readability */
+    margin-left: 20px; /* Uniform margin for alignment */
+}
+
+.nav-link:hover, .nav-link:focus {
+    background-color: #0056b3; /* Darker shade on hover for interaction feedback */
+    color: #ffffff; /* Maintain white text on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background-color: #f8f9fa; /* Light background for dropdown */
+    border: none; /* Remove default border */
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #007bff; /* Highlight color on hover */
+    color: #ffffff; /* White text for readability */
 }
 
 /* Card Styles */
 .card {
-    margin-bottom: 15px;
-    border-radius: 0; /* Modern flat design */
-    box-shadow: 0 3px 5px rgba(0,0,0,.1); /* Soft shadow for 3D effect */
+    background-color: #f9e8e8; /* White background for cards */
+    border-radius: 0.25rem; /* Slightly rounded corners for modern look */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 1rem; /* Space below cards */
 }
+
+
 
 /* Responsive Sidebar Styles */
 @media (min-width: 992px) {
-    #wrapper {
-        margin-left: 200px;
-        padding: 90px 15px 15px;
+    .navbar-nav.side-nav {
+        flex-direction: column; /* Stack links vertically */
+        position: fixed;
+        top: 56px; /* Offset from the top */
+        left: 0; /* Align to the left side */
+        width: 200px; /* Width of the sidebar */
+        height: calc(100vh - 56px); /* Full height minus navbar */
+        background-color: #343a40; /* Dark background for sidebar */
+        overflow-y: auto; /* Scrollable if content is taller than screen */
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center the sidebar items vertically */
     }
 
-    .navbar-nav.side-nav {
-        background: #014c98; /* Vibrant color for sidebar */
-        box-shadow: 2px 1px 2px rgba(0,0,0,.1);
-        position: fixed;
-        top: 56px;
-        left: 0;
-        width: 200px;
-        height: calc(100vh - 56px); /* Full height minus header */
-        overflow-y: auto; /* Allows scrolling */
-        padding-bottom: 40px;
+    #wrapper {
+        padding-left: 200px; /* Offset for the sidebar */
     }
+}
+
+/* Adjust main content area when sidebar is expanded */
+.container-fluid {
+    padding-left: 15px; /* Ensure padding is sufficient when sidebar is visible */
+    padding-right: 15px; /* Maintain padding on the right for balance */
 }
