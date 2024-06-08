@@ -9,7 +9,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title mb-5 d-inline">Add New City</h5>
-      <form method="POST" action="{{ route('create.cities') }}" enctype="multipart/form-data">
+             <form method="POST" action="{{ route('create.cities') }}" enctype="multipart/form-data">
             <!-- Email input -->
             @csrf
             <div class="form-outline mb-4 mt-4">

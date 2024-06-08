@@ -44,7 +44,7 @@
                     <td>{{ $city->territory }} Km²</td>
                     <td>{{ $city->avg_rent_price }} DH</td>
                     <td><a href="{{ route('edit.cities', $city->id) }}" class="btn btn-primary">Edit</a></td>
-                    <td><a href="{{ route ('delete.cities', $city->id) }}" class="btn btn-danger  text-center ">Delete</a></td>
+                    <td><a href="{{ route ('delete.cities', $city->id) }}" class="btn btn-danger text-center" onclick="confirmDelete(event)">Delete</a></td>
                   </tr>   
                 @endforeach
             </tbody>

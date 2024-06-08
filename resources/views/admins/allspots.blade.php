@@ -41,7 +41,7 @@
                     <td>{{ $spot->category }}</td>
                     <td>{{ $spot->price }} DH</td>
                     <td><a href="{{ route('edit.spots', $spot->id) }}" class="btn btn-success text-center">Edit</a></td>
-                    <td><a href="{{ route('delete.spots', $spot->id) }}" class="btn btn-danger text-center">Delete</a></td>
+                    <td><a href="{{ route ('delete.spots', $spot->id) }}" class="btn btn-danger text-center" onclick="confirmDelete(event)">Delete</a></td>
                   </tr>
                 @endforeach
             </tbody>

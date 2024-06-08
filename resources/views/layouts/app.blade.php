@@ -16,7 +16,7 @@
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{ asset ('assets/css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{ asset ('assets/css/templatemo-woox-travel.css')}}">
+    <link rel="stylesheet" href="{{ asset ('assets/css/agadir-travel.css')}}">
     <link rel="stylesheet" href="{{ asset ('assets/css/owl.css')}}">
     <link rel="stylesheet" href="{{ asset ('assets/css/animate.css')}}">
     <link rel="stylesheet"href='https://unpkg.com/swiper@7/swiper-bundle.min.css'>
@@ -30,7 +30,7 @@
 </head>
 <body>
     <div id="app">
-        <header class="header-area header-sticky">
+        <header class="header-area">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -42,9 +42,8 @@
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
-                                <li><a href="{{ route('index' ) }}" class="active">Home</a></li>
-                                {{-- <li><a href="about.html">About</a></li> --}}
-                                <li><a href="{{route('traveling.deals')}}">Deals</a></li>
+                                <li><a href="{{ route ('index' ) }}" class="active">Home</a></li>
+                                <li><a href="{{ route ('traveling.deals')}}">Deals</a></li>
 
                                 @guest
                                 @if (Route::has('login'))
@@ -90,12 +89,12 @@
     </div>
 
 
-    <footer>
-        <div class="container">
+<footer class="{{ Request::is('login', 'password/reset') ? 'fixed-bottom' : '' }}">
+    <div class="container">
           <div class="row">
             <div class="col-lg-12">
               <p>Copyright © 2024<a href="#">Sun_Sand</a> Touristique Portail. All Rights Reserved. 
-              <br>Design: <a href="" target="_blank" title="Sun_Sand">DREAMTEAM</a><a href="# target="_blank >Contact Us</a></p>
+              <br>Design: <a href="" target="_blank" title="Sun_Sand">DREAM TEAM</a><a href="# target="_blank >Contact Us</a></p>
             </div>
           </div>
         </div>       
@@ -123,6 +122,7 @@
         clearInterval(bannerTimer);
         bannerTimer = setInterval(bannerSwitcher,5000)
       });
+
 </script>
 </script>
 

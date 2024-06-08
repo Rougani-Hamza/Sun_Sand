@@ -9,6 +9,26 @@
      <link href="{{ asset ('assets/styles/style.css')}}" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      function confirmDelete(event) {
+        event.preventDefault(); // Prevent the default action of the delete button
+      
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, this item cannot be recovered!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+            // If the user confirms the delete action, continue with the delete request
+            window.location.href = event.target.href;
+          }
+        });
+      }
+      </script>      
 </head>
 <body>
 <div id="wrapper">

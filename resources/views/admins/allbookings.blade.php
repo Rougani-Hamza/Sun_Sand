@@ -48,7 +48,7 @@
                 <td>{{ $booking->price }} DH</td>
                 <td>{{ $booking->status }}</td>
                 <td><a href="{{ route('edit.booking', $booking->id) }}" class="btn btn-warning  text-center ">Change Status</a></td>
-                 <td><a href="{{ route('delete.booking', $booking->id) }}" class="btn btn-danger  text-center ">Delete</a></td>
+                <td><a href="{{ route ('delete.booking', $city->id) }}" class="btn btn-danger text-center" onclick="confirmDelete(event)">Delete</a></td>
               </tr>
               @endforeach
 

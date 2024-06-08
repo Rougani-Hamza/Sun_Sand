@@ -15,18 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 
 
+    Auth::routes();
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
-
-Route::group(['prefix' => 'traveling'], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 
+    Route::group(['prefix' => 'traveling'], function () {
     Route::get('/about/{id}', [App\Http\Controllers\Traveling\TravelingController::class, 'about'])->name('traveling.about');
-
-
     //booking
     Route::get('traveling/Reservation/{id}', [App\Http\Controllers\Traveling\TravelingController::class, 'makeReservations'])->name('traveling.reservation');
     Route::post('traveling/Reservation', [App\Http\Controllers\Traveling\TravelingController::class, 'storeReservations'])->name('traveling.reservation.store');
@@ -59,12 +55,12 @@ Route::group(['prefix' => 'traveling'], function () {
 
 
 //users pages 
-Route::get('users/my-bookings', [App\Http\Controllers\Users\UsersController::class, 'bookings'])->name('users.bookings')->middleware('auth:web');
+    Route::get('users/my-bookings', [App\Http\Controllers\Users\UsersController::class, 'bookings'])->name('users.bookings')->middleware('auth:web');
 
 // admin panel  routes
-Route::get('admin/login', [App\Http\Controllers\Admins\AdminController::class, 'viewLogin'])->name('view.login')->middleware('check.for.auth');
-Route::post('admin/login', [App\Http\Controllers\Admins\AdminController::class, 'checkLogin'])->name('check.login');
-Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
+    Route::get('admin/login', [App\Http\Controllers\Admins\AdminController::class, 'viewLogin'])->name('view.login')->middleware('check.for.auth');
+    Route::post('admin/login', [App\Http\Controllers\Admins\AdminController::class, 'checkLogin'])->name('check.login');
+    Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
     Route::get('/index', [App\Http\Controllers\Admins\AdminController::class, 'index'])->name('admins.dashboard');
 
 
